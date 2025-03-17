@@ -43,7 +43,7 @@ def upload():
             flash('File Saved', 'success')
             return redirect(url_for('home')) # Update this to redirect the user to a route that displays all uploaded image files
 
-    return render_template('upload.html')
+    return render_template('upload.html', form=upload)
 
 
 @app.route('/login', methods=['POST', 'GET'])
